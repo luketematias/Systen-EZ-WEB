@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+}
+
+navbar {
+    background-color: #222;
+}
+
+#logo1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: #f2f2f2;
+
+}
+
+#logo2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    color: #ddd;
+
+}
+
+
+#logoLogin {
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.background {
+  background-color: #e5e5e5;
+}
+
+#login {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    margin: 80px auto;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 600px;
+    background-color: #ffffff;
+}
+
+#login h3 {
+    justify-content: center;
+    display: flex;
+}
+
+#login label, input {
+    margin-top: 30px;
+}
+
+#btnLogin, #btnCadastrarProduto, #btnCadastrarUsuario, #btnRegistrarVenda {
+    margin-top: 30px;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+#btnLogin, #btnCadastro,#btnListas,#btnRelatorios,#btnVendas,#btnCadastrarProdutos,#btnCadastrarUsuarios, #btnListarProdutos,#btnListarUsuarios,
+#btnRelatorioEstoque, #btnRelatorioVendas, #btnRelatorioMargemLucro, #btnCadastrarProduto, #btnCadastrarUsuario, #btnRegistrarVenda {
+    background-color: #333; 
+    border-color: #555;    
+}
+
+.card {
+    padding: 20px;
+}
+
+i {
+    color: #444; 
+}
+
+#btnsCabecalho {
+    background-color: #111; 
+    border-color: #333;
+    margin: 10px;
+}
+
+.titulos {
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#formularios {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    margin: 90px auto;
+    padding: 50px;
+    max-width: 700px;
+    background-color: #ffffff;
+    display: flex;
+}
+
+#formularios h3 {
+    justify-content: center;
+    display: flex;
+}
+
+.conteudoPagina {
+    margin-top: 150px;
+}
+
+.icons {
+    color: #ffffff;
+}

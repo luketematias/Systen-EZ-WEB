@@ -1,0 +1,91 @@
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEN EZ - Cadastrar produtos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="container-fluid background">
+<nav style="background-color: #222" class="navbar navbar-expand-lg fixed-top d-flex ml-auto" data-bs-theme="dark">
+    <div class="container-fluid" style="background-color: #222">
+        <a class="navbar-brand" th:href="@{/telaInicial}">
+            <div id="logo1">SISTEMA</div>
+            <div id="logo2">SYSTEN EZ</div>
+        </a>
+        <div  id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " th:href="@{/telaCadastros}">Cadastros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " th:href="@{/telaListas}">Listas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " th:href="@{/telaRelatorios}">Relatórios</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="conteudoPagina">
+
+        <div class="row" id="formularios">
+            <h3><strong>CADASTRAR PRODUTO</strong></h3>
+            <form th:action="@{/gravarProduto}" th:object="${produto}" method="post">
+
+                <label for="nomeProduto" class="form-label ">Nome do produto:</label>
+                <input type="text" id="nomeProduto" class="form-control" name="nomeProduto" th:field="${produto.nome}" th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{nome}"></div><br>
+
+                <label for="categoriaProduto" class="form-label ">Categoria:</label>
+                <input type="text" id="categoriaProduto" class="form-control" name="categoriaProduto" th:field="${produto.categoria}" th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{categoria}"></div><br>
+
+                <label for="precoCustoProduto" class="form-label ">Preço de custo:</label>
+                <input type="number" id="precoCustoProduto" class="form-control" name="precoCustoProduto" th:field="${produto.precoCusto}" th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{precoCusto}"></div><br>
+
+                <label for="precoVendaProduto" class="form-label ">Preço de venda:</label>
+                <input type="number" id="precoVendaProduto" class="form-control" name="precoVendaProduto" th:field="${produto.precoVenda}" th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{precoVenda}"></div><br>
+
+                <label for="quantidadeEstoque" class="form-label ">Quantidade de estoque:</label>
+                <input type="number" id="quantidadeEstoque" class="form-control" name="quantidadeEstoque" th:field="${produto.quantidade}" th:errorclass="is-invalid">
+                <div class="invalid-feedback" th:errors="*{quantidade}"></div><br>
+
+                <div class="text-center">
+                    <button onclick="salvarProduto()" id="btnCadastrarProduto" class="btn btn-primary">
+                        <strong>CADASTRAR</strong>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+<!-- Toastify -->
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<!-- Seu JS -->
+<script th:src="@{/js/script.js}"></script>
+
+<!-- Toast de erro -->
+<script th:if="${erroToast}">
+    toastErro();
+</script>
+
+<!-- Toast de sucesso -->
+<script th:if="${sucessoToast}">
+    toastSucesso();
+</script>
+
+</body>
+
+</html>
+
+</html>

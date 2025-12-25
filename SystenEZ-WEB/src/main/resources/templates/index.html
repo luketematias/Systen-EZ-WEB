@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEN EZ - Página Principal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="container-fluid background">
+    <nav style="background-color: #222" class="navbar navbar-expand-lg fixed-top d-flex ml-auto" data-bs-theme="dark">
+        <div class="container-fluid" style="background-color: #222">
+            <a class="navbar-brand" th:href="@{/telaInicial}">
+                <div id="logo1">SISTEMA</div>
+                <div id="logo2">SYSTEN EZ</div>
+            </a>
+            <div  id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}"><strong>Logout</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="conteudoPagina">
+    <h2 class="titulos"><strong>Bem vindo ao sistema SYSTEN EZ</strong></h2>
+    <div class="row" style="height:100px;"></div>
+
+
+    <div class="row">
+        <div class="col-md-3 d-flex justify-content-center">
+            <div class="card text-center" style="width: 22rem;">
+                <i class="bi bi-pencil-square" style="font-size: 3rem; margin-top: 15px;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">TELA DE CADASTROS</h5>
+                    <p class="card-text">Página para o cadastro de <strong>produtos</strong> ou
+                        <strong>usuários</strong>.</p>
+                    <a th:href="@{/telaCadastros}"><button id="btnCadastro" type="submit"
+                            class="btn btn-primary"><strong>CADASTROS</strong></button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 d-flex justify-content-center">
+            <div class="card text-center" style="width: 22rem;">
+                <i class="bi bi-list-task" style="font-size: 3rem; margin-top: 15px;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">TELA DE LISTAS</h5>
+                    <p class="card-text">Página para as listas de <strong>produtos</strong> ou
+                        <strong>usuários</strong>.</p>
+                    <a th:href="@{/telaListas}"><button id="btnListas" type="submit"
+                            class="btn btn-primary"><strong>LISTAS</strong></button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 d-flex justify-content-center">
+            <div class="card text-center" style="width: 22rem;">
+                <i class="bi bi-flag-fill" style="font-size: 3rem; margin-top: 15px;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">TELA DE RELATÓRIOS</h5>
+                    <p class="card-text">Página para os relatórios de <strong>estoque</strong>,
+                        <strong>vendas</strong> ou <strong>margem de lucro</strong>.</p>
+                    <a th:href="@{/telaRelatorios}"><button id="btnRelatorios" type="submit"
+                            class="btn btn-primary"><strong>RELATÓRIOS</strong></button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 d-flex justify-content-center">
+            <div class="card text-center" style="width: 22rem;">
+                <i class="bi bi-bag-check-fill" style="font-size: 3rem; margin-top: 15px;"></i>
+                <div class="card-body">
+                    <h5 class="card-title">TELA DE REGISTRO DE VENDAS</h5>
+                    <p class="card-text">Página para registrar alguma <strong>venda</strong>.</p>
+                    <a th:href="@{/registroDeVendas}"><button id="btnVendas" type="submit"
+                            class="btn btn-primary"><strong>VENDAS</strong></button></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>
+</body>
+
+</html>
